@@ -1,0 +1,24 @@
+@use "../global" as global;
+
+.navbar {
+  background-color: global.$fourth-color;
+}
+
+#right-navbar {
+  display: flex;
+
+}
+
+footer {
+  background-color: global.$fourth-color;
+  color: white;
+  padding: 15px;
+}
+
+.left-column, .right-column {
+  background-color: global.$third-color;
+}
+
+.center-column {
+  background-color: global.$second-color;
+}
