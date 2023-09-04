@@ -1,41 +1,31 @@
 import {NgModule} from "@angular/core";
 import {RouterModule, Routes} from "@angular/router";
-import {WelcomeComponent} from "./welcome/welcome.component";
-import {SignupComponent} from "./auth/signup/signup.component";
-import {LoginComponent} from "./auth/login/login.component";
-import {TrainingComponent} from "./training/training.component";
-import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import { AuthGuard } from '@auth0/auth0-angular';
 
 const routes: Routes = [
   {
-    path: 'welcome',
-    title: 'Welcome page',
-    component: WelcomeComponent },
-  {
-    path: 'signup',
-    title: 'Sign up',
-    component: SignupComponent
-  },
-  {
-    path: 'login',
-    title: 'Login',
-    component: LoginComponent
-  },
-  {
-    path: 'training',
-    title: 'Training',
-    component: TrainingComponent
-  },
-  {
     path: '',
-    redirectTo: '/welcome',
-    pathMatch: 'full'
+    pathMatch: 'full',
+    loadChildren: () => import('./features/home/home.module')
+      .then(m => m.HomeModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./features/profile/profile.module')
+      .then(m => m.ProfileModule),
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'callback',
+    loadChildren: () => import('./features/callback/callback.module').then(m => m.CallbackModule)
   },
   {
     path: '**',
-    component:  PageNotFoundComponent
+    loadChildren: () => import('./features/not-found/not-found.module')
+      .then(m => m.NotFoundModule),
   }
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot((routes))],
   exports: [RouterModule],
