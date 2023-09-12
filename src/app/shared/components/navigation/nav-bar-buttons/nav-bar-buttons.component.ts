@@ -20,7 +20,7 @@ export class NavBarButtonsComponent {
       appState: {
         target: '/profile'
       }
-    }).subscribe((e) => console.log({e}))
+    })
   }
 
   handleSignUp(): void {

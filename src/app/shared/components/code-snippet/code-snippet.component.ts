@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
 })
 export class CodeSnippetComponent {
   @Input() code: string | undefined;
-  @Input() title: string | null | undefined;
+  @Input() title: string | undefined;
 }
