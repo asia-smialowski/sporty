@@ -1,0 +1,10 @@
+<div class="nav-bar-buttons">
+  <ng-container *ngIf="isAuthenticated$ | async; else unAuthenticated">
+    <button mat-stroked-button class="button" (click)="handleLogout()">Log out</button>
+
+  </ng-container>
+  <ng-template #unAuthenticated>
+    <button mat-stroked-button class="button" (click)="handleSignUp()">Sign up</button>
+    <button mat-stroked-button class="button" (click)="handleLogin()">Log In</button>
+  </ng-template>
+</div>

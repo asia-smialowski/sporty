@@ -1,0 +1,58 @@
+.code-snippet {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-top: 3.2rem;
+  overflow: hidden;
+}
+
+.code-snippet-title {
+  height: 4.8rem;
+  width: 100%;
+  background-color: red;
+  color: red;
+  font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+  padding: 1.2rem 1.6rem;
+}
+
+.code-snippet-container {
+  min-height: 32.4rem;
+  background-color: $background-color;
+  overflow-x: auto;
+}
+
+.code-snippet-wrapper {
+  display: inline-block;
+  padding: 32px;
+}
+
+.code-snippet-body {
+  margin: 0;
+  color: white;
+  font-size: 16px;
+  line-height: 32px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+@media only screen and (max-width: 480px) {
+  .code-snippet-title {
+    height: 4.4rem;
+    font-size: 1.4rem;
+    line-height: 2.2rem;
+    padding: 1.2rem 1.6rem;
+  }
+
+  .code-snippet-wrapper {
+    padding: 1.6rem;
+  }
+
+  .code-snippet-body {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+}

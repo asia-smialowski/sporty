@@ -1,0 +1,82 @@
+@import "variables";
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow: scroll;
+}
+
+.page-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 100%;
+  width: 100%;
+}
+
+.page-layout-content {
+  flex: 1;
+  flex-basis: auto;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 8rem;
+  max-width: 120rem;
+  width: 100%;
+}
+
+.content-layout {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+
+  width: 100%;
+  min-height: 640px;
+  padding: 48px;
+}
+
+.content-title {
+  margin-top: 0;
+  color: $pinky;
+}
+
+.content-body {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+#page-description {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-bottom: 1.6rem;
+  }
+
+  span:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .page-layout-content {
+    margin-top: 6.4rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .content-layout {
+    padding: 1.6rem;
+  }
+
+  .content-title {
+    font-size: 2.4rem;
+  }
+}
