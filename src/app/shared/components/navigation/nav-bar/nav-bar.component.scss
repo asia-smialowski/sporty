@@ -1,3 +1,5 @@
+@use 'src/styles/colors';
+
 .nav-bar-container {
   display: flex;
   position: fixed;
@@ -5,12 +7,12 @@
   flex-shrink: 0;
   width: 100%;
   z-index: 300;
-  background-color: #FEA1A1;
+  background-color: colors.$pinky;
 }
 
 .nav-bar {
-  flex: 1;
   display: flex;
+  flex: 1;
   align-items: center;
   flex-shrink: 0;
   height: 80px;

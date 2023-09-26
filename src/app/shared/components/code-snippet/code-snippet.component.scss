@@ -1,3 +1,5 @@
+@use 'src/styles/colors';
+
 .code-snippet {
   display: flex;
   flex-direction: column;
@@ -10,8 +12,6 @@
 .code-snippet-title {
   height: 4.8rem;
   width: 100%;
-  //background-color: red;
-  //color: red;
   font-family: "Fira Code", source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
   font-weight: 600;
   font-size: 1.6rem;
@@ -21,7 +21,7 @@
 
 .code-snippet-container {
   min-height: 32.4rem;
-  background-color: white;
+  background-color: colors.$ecru;
   overflow-x: auto;
 }
 

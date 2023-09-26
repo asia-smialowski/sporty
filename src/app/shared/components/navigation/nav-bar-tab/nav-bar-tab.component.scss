@@ -1,3 +1,5 @@
+@use 'src/styles/colors';
+
 .nav-bar-tab {
   display: flex;
   flex-direction: row;
@@ -5,7 +7,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  color: #F9FBE7;
+  color: colors.$main-background-color;
   text-decoration: none;
   margin: 0 24px;
 }
@@ -15,8 +17,7 @@
 }
 
 .nav-bar-tab-active {
-  text-decoration-line: underline;
-  text-decoration-style: solid;
+  text-decoration: underline solid;
   text-decoration-thickness: 4px;
   text-underline-offset: 8px;
 }

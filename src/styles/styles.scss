@@ -1,4 +1,4 @@
-@import "variables";
+@use 'colors' as colors;
 
 html, body {
   height: 100%;
@@ -12,7 +12,7 @@ body {
 
 .content-title {
   margin-top: 0;
-  color: $pinky;
+  color: colors.$pinky;
 }
 
 .content-body {
