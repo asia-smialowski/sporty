@@ -1,14 +1,16 @@
+@use 'src/styles/colors';
+
 .nav-bar-buttons {
   display: flex;
   margin-left: 24px;
 
   .button {
     min-width: 8.4rem;
-    border: 0.1rem solid #ECCDB4;
-    color: #F9FBE7;
+    border: 0.1rem solid colors.$peachy;
+    color: colors.$main-background-color;
     margin-right: 1.6rem;
     border-radius: 0.8rem;
-    background-color: lighten(#FEA1A1, 4%);
+    background-color: lighten(colors.$pinky, 4%);
   }
 
   .button:last-child {

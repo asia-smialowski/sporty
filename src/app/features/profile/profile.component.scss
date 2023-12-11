@@ -1,6 +1,12 @@
-.profile-grid {
+@use 'src/styles/colors';
+
+@mixin column-flex {
   display: flex;
   flex-direction: column;
+}
+
+.profile-grid {
+  @include column-flex;
   margin-top: 48px;
 }
 
@@ -18,15 +24,14 @@
 }
 
 .profile-headline {
-  display: flex;
-  flex-direction: column;
+  @include column-flex;
   justify-content: space-around;
 }
 
 .profile-title {
   margin-top: 0;
   margin-bottom: 0;
-  color: var(--white);
+  color: colors.$ecru;
 }
 
 .profile-details {
@@ -42,7 +47,7 @@
     height: 5.6rem;
     width: 5.6rem;
     border-radius: 50%;
-    border: solid 0.13rem var(--aqua);
+    border: solid 0.13rem colors.$pinky;
   }
 
   .profile-title {
